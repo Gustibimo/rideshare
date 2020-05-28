@@ -19,6 +19,12 @@ defmodule RidexWeb.Router do
     get "/", PageController, :index
   end
 
+  scope "/api", RidexWeb do
+    pipe_through :api
+
+    post "/authenticate", AuthenticationController, :authenticate
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", RidexWeb do
   #   pipe_through :api
