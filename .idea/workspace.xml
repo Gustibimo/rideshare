@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54e4e8fd-6458-4dfd-b5a8-79beff0abb3f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/components/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/Map.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/components/lib/usePosition.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/ridex_web/controllers/authentication_controller.ex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/ridex_web/channels/user_socket_test.exs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ridex_web/channels/cell_channel.ex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ridex_web/channels/user_channel.ex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/ridex_web/controllers/ride_requests_controller.ex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ridex_web/channels/cell_channel_test.exs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/assets/.babelrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/components/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/components/Map.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ridex/user.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ridex/user.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ridex_web/router.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ridex_web/router.ex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ridex_web/templates/layout/app.html.eex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ridex_web/templates/layout/app.html.eex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ridex_web/templates/page/index.html.eex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ridex_web/templates/page/index.html.eex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ridex_web/channels/user_socket.ex" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ridex_web/channels/user_socket.ex" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +89,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -110,6 +103,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/ridex_web" />
+      <recent name="$PROJECT_DIR$/lib/ridex_web/channels" />
       <recent name="$PROJECT_DIR$/lib/ridex" />
     </key>
   </component>
@@ -170,18 +165,34 @@
       <option name="presentableId" value="Default" />
       <updated>1590632341719</updated>
       <workItem from="1590632346552" duration="39000" />
-      <workItem from="1590632418468" duration="4555000" />
+      <workItem from="1590632418468" duration="7071000" />
     </task>
+    <task id="LOCAL-00001" summary="Add user_socket_test">
+      <created>1590637120754</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590637120755</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add user_socket_test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add user_socket_test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="314" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1590634620062">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state x="314" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.28.1366.740@0.28.1366.740" timestamp="1590634620062" />
+    <state x="285" y="28" key="CommitChangelistDialog2" timestamp="1590637120466">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="285" y="28" key="CommitChangelistDialog2/0.28.1366.740@0.28.1366.740" timestamp="1590637120466" />
     <state x="470" y="156" key="FileChooserDialogImpl" timestamp="1590633223379">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
@@ -190,9 +201,13 @@
       <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state x="184" y="28" key="SettingsEditor/0.28.1366.740@0.28.1366.740" timestamp="1590633919064" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1590637062335">
+    <state x="283" y="134" key="Vcs.Push.Dialog.v2" timestamp="1590637122956">
       <screen x="0" y="28" width="1366" height="740" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.28.1366.740@0.28.1366.740" timestamp="1590637062335" />
+    <state x="283" y="134" key="Vcs.Push.Dialog.v2/0.28.1366.740@0.28.1366.740" timestamp="1590637122956" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1590639051302">
+      <screen x="0" y="28" width="1366" height="740" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.28.1366.740@0.28.1366.740" timestamp="1590639051302" />
   </component>
 </project>

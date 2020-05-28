@@ -1,9 +1,11 @@
 defmodule RidexWeb.UserSocket do
   use Phoenix.Socket
+  alias Ridex.Guardian
 
   ## Channels
   # channel "room:*", RidexWeb.RoomChannel
-
+  channel "user:*", RidexWeb.UserChannel
+  channel "cell:*", RidexWeb.CellChannel
   # Socket params are passed from the client and can
   # be used to verify and authenticate a user. After
   # verification, you can put default assigns into
@@ -15,10 +17,18 @@ defmodule RidexWeb.UserSocket do
   #
   # See `Phoenix.Token` documentation for examples in
   # performing token verification on connect.
-  @impl true
-  def connect(_params, socket, _connect_info) do
-    {:ok, socket}
+
+  def connect(%{"token" => token}, socket) do
+    case Guardian.resource_from_token(token) do
+      {:ok, user, _claims} ->
+        {:ok, assign(socket, :current_user, user)}
+      _ ->
+        :error
+    end
   end
+
+  @impl true
+  def connect(_params, _socket), do: :error
 
   # Socket id's are topics that allow you to identify all sockets for a given user:
   #
@@ -31,5 +41,5 @@ defmodule RidexWeb.UserSocket do
   #
   # Returning `nil` makes this socket anonymous.
   @impl true
-  def id(_socket), do: nil
+  def id(socket), do: socket.assigns[:current_user].id |> to_string()
 end
